@@ -1,12 +1,12 @@
+import pytest
+
 with open("inputs/input_day_1.txt") as f:
     modules_mass = [int(x) for x in f.read().split()]
 
-print(modules_mass)
 
 def required_fuel(masses):
     return sum((int(mass/3))-2 for mass in masses)
 
-print(required_fuel(modules_mass))
 
 def required_fuel_p2(masses):
     """Required fuel changed to part 2 of challange"""
@@ -18,5 +18,12 @@ def required_fuel_p2(masses):
             fuel = (int(fuel/3))-2
     return fuel_sum
 
-print(required_fuel_p2([1969]))
+
+def test():
+    assert required_fuel([1969]) == 654
+    assert required_fuel([100756]) == 33583
+    assert required_fuel_p2([1969]) == 966
+    assert required_fuel_p2([100756]) == 50346
+    
+print(required_fuel(modules_mass))
 print(required_fuel_p2(modules_mass))
