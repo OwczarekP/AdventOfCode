@@ -25,6 +25,7 @@ def test():
     assert required_fuel_p2([1969]) == 966
     assert required_fuel_p2([100756]) == 50346
     
-test()
+
+test()    
 print(required_fuel(modules_mass))
 print(required_fuel_p2(modules_mass))
