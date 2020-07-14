@@ -23,6 +23,17 @@ def third_check(password_list):
         if same_digit > 0: possibilities_3.append(password)
     return possibilities_3
 
+def third_check_p2(password_list):
+    possibilities_3 = []
+    for password in password_list:
+        number = str(password)
+        for digit in number:
+            count_nb = number.count(digit)
+            if count_nb == 2:
+                possibilities_3.append(password)               
+                break  
+    return possibilities_3
+
 
 def possibilities_check(password_list):
     first = first_check(password_list)
@@ -30,6 +41,13 @@ def possibilities_check(password_list):
     third = third_check(second)
     return len(third)
 
+def possibilities_check_p2(password_list):
+    first = first_check(password_list)
+    second = second_check(first)
+    third = third_check_p2(second)
+    return len(third)
+
 
 input = list(range(372037, 905157))
 print(possibilities_check(input))
+print(possibilities_check_p2(input))
