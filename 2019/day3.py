@@ -1,4 +1,4 @@
-with open("inputs/input_day_3.txt") as f:
+with open("2019/inputs/input_day_3.txt") as f:
     wires = [line.strip().split(',') for line in f]
 
 wire_1 = wires[0]

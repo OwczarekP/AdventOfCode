@@ -1,6 +1,6 @@
 import pytest
 
-with open("inputs/input_day_1.txt") as f:
+with open("2019/inputs/input_day_1.txt") as f:
     modules_mass = [int(x) for x in f.read().split()]
 
 

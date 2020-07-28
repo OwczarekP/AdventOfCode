@@ -1,7 +1,7 @@
 import pytest
 import copy
 
-with open("inputs/input_day_2.txt") as f:
+with open("2019/inputs/input_day_2.txt") as f:
     diagnostic_program = [int(x) for x in f.read().split(',')]
 
 
